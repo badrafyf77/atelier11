@@ -1,8 +1,9 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'NodeJS'   // Nom configuré dans Jenkins > Manage Jenkins > Tools
+    environment {
+        // Utilise le node/npm installé sur le système (Mac M1 via Homebrew)
+        PATH = "/opt/homebrew/bin:/usr/local/bin:${env.PATH}"
     }
 
     stages {

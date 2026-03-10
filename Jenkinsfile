@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        // Utilise le node/npm installé sur le système (Mac M1 via Homebrew)
-        PATH = "/opt/homebrew/bin:/usr/local/bin:${env.PATH}"
+        // Node.js installé via nvm sur Mac M1
+        PATH = "/Users/afyfbadreddine/.nvm/versions/node/v22.17.0/bin:/opt/homebrew/bin:/usr/local/bin:${env.PATH}"
     }
 
     stages {

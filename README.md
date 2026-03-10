@@ -1,4 +1,5 @@
 # Atelier 11 – Jenkins CI/CD – Calculatrice Node.js
+
 ## Mac M1 (Apple Silicon) – Guide complet
 
 ---
@@ -78,7 +79,7 @@ Copier ce mot de passe et le coller dans http://localhost:8080.
 2. Chercher **NodeJS** → cocher → **Install without restart**
 3. **Manage Jenkins** → **Global Tool Configuration** → **NodeJS installations**
 4. Cliquer **Add NodeJS** :
-   - Name : `NodeJS`   ← doit correspondre au Jenkinsfile
+   - Name : `NodeJS` ← doit correspondre au Jenkinsfile
    - Version : choisir la LTS (ex : 20.x)
    - Cocher "Install automatically"
 5. **Save**
@@ -104,6 +105,7 @@ npm start
 ```
 
 Tester les tests localement :
+
 ```bash
 npm test
 ```
@@ -147,6 +149,7 @@ brew install ngrok/ngrok/ngrok
 ```
 
 S'inscrire sur https://ngrok.com et obtenir son authtoken :
+
 ```bash
 ngrok config add-authtoken <TON_AUTHTOKEN>
 ```
@@ -204,11 +207,11 @@ post {
 
 ## Commandes utiles
 
-| Action | Commande |
-|---|---|
-| Démarrer Jenkins | `brew services start jenkins-lts` |
-| Arrêter Jenkins | `brew services stop jenkins-lts` |
+| Action                | Commande                                   |
+| --------------------- | ------------------------------------------ |
+| Démarrer Jenkins      | `brew services start jenkins-lts`          |
+| Arrêter Jenkins       | `brew services stop jenkins-lts`           |
 | Voir les logs Jenkins | `cat ~/.jenkins/jobs/<JOB>/builds/<N>/log` |
-| Lancer les tests | `npm test` |
-| Démarrer le serveur | `npm start` |
-| Exposer avec ngrok | `ngrok http 8080` |
+| Lancer les tests      | `npm test`                                 |
+| Démarrer le serveur   | `npm start`                                |
+| Exposer avec ngrok    | `ngrok http 8080`                          |
